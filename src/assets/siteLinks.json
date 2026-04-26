@@ -8,5 +8,10 @@
     "icon": "Cloud",
     "name": "网盘",
     "link": "https://alist.iosbx.com/"
+  },
+  {
+    "icon": "Apple",
+    "name": "软件源",
+    "link": "https://yuan.iosbx.com/"
   }
 ]
