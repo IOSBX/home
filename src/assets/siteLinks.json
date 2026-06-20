@@ -13,5 +13,10 @@
     "icon": "Apple",
     "name": "软件源",
     "link": "https://yuan.iosbx.com/"
+  },
+  {
+    "iconImg": "/images/icon/sileo.png",
+    "name": "Sileo",
+    "link": "https://your-sileo-link.com/"
   }
 ]
