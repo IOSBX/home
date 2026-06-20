@@ -27,9 +27,11 @@
               :style="index < 3 ? 'margin-bottom: 20px' : null"
               @click="jumpLink(item)"
             >
-              <Icon size="26">
+              <!-- 支持两种图标方式：vicons 图标库 和 图片文件 -->
+              <Icon v-if="!item.iconImg" size="26">
                 <component :is="siteIcon[item.icon]" />
               </Icon>
+              <img v-else :src="item.iconImg" :alt="item.name" class="icon-img" />
               <span class="name text-hidden">{{ item.name }}</span>
             </div>
           </el-col>
@@ -154,6 +156,12 @@ onMounted(() => {
         transform: scale(1);
       }
 
+      .icon-img {
+        width: 26px;
+        height: 26px;
+        object-fit: contain;
+      }
+
       .name {
         font-size: 1.1rem;
         margin-left: 8px;
@@ -172,6 +180,9 @@ onMounted(() => {
           font-size: 1rem;
           margin-left: 0;
           margin-top: 8px;
+        }
+        .icon-img {
+          margin-bottom: 8px;
         }
       }
     }
